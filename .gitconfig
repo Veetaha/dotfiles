@@ -1,0 +1,11 @@
+[credential]
+	helper = store
+[user]
+	email = veetaha2@gmail.com
+	name = Veetaha
+[core]
+	excludesfile = /home/veetaha/.gitignore_global
+[push]
+	default = current
+[pull]
+	default = current

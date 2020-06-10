@@ -1,0 +1,36 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\*\shell\Convert to]
+"subcommands"=""
+
+[HKEY_CLASSES_ROOT\*\shell\Convert to\shell]
+
+[HKEY_CLASSES_ROOT\*\shell\Convert to\shell\01MP4]
+"muiverb"="MP4"
+
+[HKEY_CLASSES_ROOT\*\shell\Convert to\shell\01MP4\command]
+@="cmd /c \"\"ffmpeg\" -i \"%1\" \"%1.mp4\"\""
+
+[HKEY_CLASSES_ROOT\*\shell\Convert to\shell\02MP3]
+"muiverb"="MP3"
+
+[HKEY_CLASSES_ROOT\*\shell\Convert to\shell\02MP3\command]
+@="cmd /c \"\"ffmpeg\" -i \"%1\" \"%1.mp3\"\""
+
+[HKEY_CLASSES_ROOT\*\shell\Convert to\shell\03GIF]
+"muiverb"="GIF"
+
+[HKEY_CLASSES_ROOT\*\shell\Convert to\shell\03GIF\command]
+@="cmd /c \"\"ffmpeg\" -i \"%1\" \"%1.gif\"\""
+
+[HKEY_CLASSES_ROOT\*\shell\Convert to\shell\04WEBM]
+"muiverb"="WEBM"
+
+[HKEY_CLASSES_ROOT\*\shell\Convert to\shell\04WEBM\command]
+@="cmd /c \"\"ffmpeg\" -i \"%1\" \"%1.webm\"\""
+
+[HKEY_CLASSES_ROOT\*\shell\Convert to\shell\05WAV]
+"muiverb"="WAV"
+
+[HKEY_CLASSES_ROOT\*\shell\Convert to\shell\05WAV\command]
+@="cmd /c \"\"ffmpeg\" -i \"%1\" \"%1.wav\"\""
