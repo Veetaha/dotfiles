@@ -11,26 +11,63 @@ Windows Registry Editor Version 5.00
 [HKEY_CLASSES_ROOT\*\shell\Convert to\shell\01MP4\command]
 @="cmd /c \"\"ffmpeg\" -i \"%1\" \"%1.mp4\"\""
 
-[HKEY_CLASSES_ROOT\*\shell\Convert to\shell\02MP3]
+[HKEY_CLASSES_ROOT\*\shell\Convert to\shell\02MP4]
+"muiverb"="GIF to soundless MP4"
+
+[HKEY_CLASSES_ROOT\*\shell\Convert to\shell\02MP4\command]
+@="cmd /c \"\"ffmpeg\" -i \"%1\" -fps_mode passthrough -c:v libx264 -an -movflags \"+faststart\" \"%1.mp4\"\""
+
+[HKEY_CLASSES_ROOT\*\shell\Convert to\shell\03MP4]
+"muiverb"="MP4 (bitrate 500k)"
+
+[HKEY_CLASSES_ROOT\*\shell\Convert to\shell\03MP4\command]
+@="cmd /c \"\"ffmpeg\" -i \"%1\" -b:v 500k \"%1-500k.mp4\"\""
+
+[HKEY_CLASSES_ROOT\*\shell\Convert to\shell\04MP4]
+"muiverb"="MP4 (bitrate 2000k)"
+
+[HKEY_CLASSES_ROOT\*\shell\Convert to\shell\04MP4\command]
+@="cmd /c \"\"ffmpeg\" -i \"%1\" -b:v 2000k \"%1-2000k.mp4\"\""
+
+[HKEY_CLASSES_ROOT\*\shell\Convert to\shell\05MP4]
+"muiverb"="MP4 (1080p)"
+
+[HKEY_CLASSES_ROOT\*\shell\Convert to\shell\05MP4\command]
+@="cmd /c \"\"ffmpeg\" -i \"%1\" -vf \"scale=1980:-1:flags=lanczos\" \"%1-1080p.mp4\"\""
+
+[HKEY_CLASSES_ROOT\*\shell\Convert to\shell\06MP4]
+"muiverb"="MP4 (1080p, bitrate 500k)"
+
+[HKEY_CLASSES_ROOT\*\shell\Convert to\shell\06MP4\command]
+@="cmd /c \"\"ffmpeg\" -i \"%1\" -vf \"scale=1980:-1:flags=lanczos\" -b:v 500k \"%1-1080p-500k.mp4\"\""
+
+[HKEY_CLASSES_ROOT\*\shell\Convert to\shell\07MP4]
+"muiverb"="MP4 (1080p, bitrate 2000k)"
+
+[HKEY_CLASSES_ROOT\*\shell\Convert to\shell\07MP4\command]
+@="cmd /c \"\"ffmpeg\" -i \"%1\" -vf \"scale=1980:-1:flags=lanczos\" -b:v 2000k \"%1-1080p-2000k.mp4\"\""
+
+
+[HKEY_CLASSES_ROOT\*\shell\Convert to\shell\08MP3]
 "muiverb"="MP3"
 
-[HKEY_CLASSES_ROOT\*\shell\Convert to\shell\02MP3\command]
+[HKEY_CLASSES_ROOT\*\shell\Convert to\shell\08MP3\command]
 @="cmd /c \"\"ffmpeg\" -i \"%1\" \"%1.mp3\"\""
 
-[HKEY_CLASSES_ROOT\*\shell\Convert to\shell\03GIF]
+[HKEY_CLASSES_ROOT\*\shell\Convert to\shell\09GIF]
 "muiverb"="GIF"
 
-[HKEY_CLASSES_ROOT\*\shell\Convert to\shell\03GIF\command]
+[HKEY_CLASSES_ROOT\*\shell\Convert to\shell\09GIF\command]
 @="cmd /c \"\"ffmpeg\" -i \"%1\" \"%1.gif\"\""
 
-[HKEY_CLASSES_ROOT\*\shell\Convert to\shell\04WEBM]
+[HKEY_CLASSES_ROOT\*\shell\Convert to\shell\10WEBM]
 "muiverb"="WEBM"
 
-[HKEY_CLASSES_ROOT\*\shell\Convert to\shell\04WEBM\command]
+[HKEY_CLASSES_ROOT\*\shell\Convert to\shell\10WEBM\command]
 @="cmd /c \"\"ffmpeg\" -i \"%1\" \"%1.webm\"\""
 
-[HKEY_CLASSES_ROOT\*\shell\Convert to\shell\05WAV]
+[HKEY_CLASSES_ROOT\*\shell\Convert to\shell\11WAV]
 "muiverb"="WAV"
 
-[HKEY_CLASSES_ROOT\*\shell\Convert to\shell\05WAV\command]
+[HKEY_CLASSES_ROOT\*\shell\Convert to\shell\11WAV\command]
 @="cmd /c \"\"ffmpeg\" -i \"%1\" \"%1.wav\"\""
